@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int n,t,p,ans;
+    int n;
     cin>>n;
     int a[n][2];
     for(int i=0;i<n;i++){
@@ -12,17 +12,15 @@ int main()
             cin>>a[i][j];
         }
     }
-    t=a[0][1];
-    for(int i=1;i<n;i++){
-        p=((t+a[i][1])-a[i][0]);
-        if(p>t){
-            ans=p;
-            t=p;
-        }
-        else if(p<=t){
-            ans=t;
+    int t=a[0][1];
+    int max=a[0][1];
+    for(int i=1;i<n-1;i++){
+        
+        t=(t-a[i][0])+a[i][1];
+        if(t>=max){
+            max=t;
         }
     }
-    cout<<ans<<endl;
+    cout<<max<<endl;
     return 0;
 }
