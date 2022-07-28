@@ -1,23 +1,20 @@
-#include <iostream>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int s1,s2,s3,s4;
-    cin>>s1>>s2>>s3>>s4;
-    if(s1==s2 && s1==s3 && s1==s4){
-        cout<<3<<endl;
+    int a[4];
+    int count=0;
+    for(int i=0;i<4;i++){
+        cin>>a[i];
+    }    
+    sort(a,a+4);
+    for(int i=0;i<3;i++){
+        if(a[i]==a[i+1]){
+            count++;
+        }
     }
-    else if(s1==s2 && s1==s3 && s1!=s4 || s1==s2 && s1!=s3 && s1==s4 || s1!=s2 && s1==s3 && s1==s4 ||s2==s3 && s2==s4){
-        cout<<2<<endl;
-    }
-    else if(s1==s2 && s1!=s3 && s1!=s4 || s1!=s2 && s1==s3 && s1!=s4 || s1!=s2 && s1!=s3 && s1==s4 || s2==s3 && s2!=s4 || s2!=s3 && s2==s4 || s3==s4){
-        cout<<1<<endl;
-    }
-    else{
-        cout<<0<<endl;
-    }
-
+    cout<<count<<endl;
     return 0;
 }
+
