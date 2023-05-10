@@ -12,8 +12,8 @@ public:
         for(int i=1;i<N;i++){
             if(maxi+mimi[i]>=K){
                 ans++;
-                maxi=max(maxi,A[i]);
             }
+            maxi=max(maxi,A[i]);
         }
         return ans;
     }
