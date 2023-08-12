@@ -38,11 +38,24 @@ void printAns(vector<int> &ans){
 }
 
 int main(){
-    vector<int> adj[6];
-    addEdge(adj,0,1);
-    addEdge(adj,1,2);
-    addEdge(adj,1,3);
-    addEdge(adj,0,4);
+    int n;
+    cout<<"Enter no of nodes"<<endl;
+    cin>>n;
+    vector<int> adj[n];
+    int m;
+    cout<<"Enter the no of edges"<<endl;
+    cin>>m;
+    int u,v;
+    cout<<"Enter the edges(u,v)"<<endl;
+    for(int i=0;i<m;i++){
+        cin>>u>>v;
+        addEdge(adj,u,v);
+    }
+    // vector<int> adj[6];
+    // addEdge(adj,0,1);
+    // addEdge(adj,1,2);
+    // addEdge(adj,1,3);
+    // addEdge(adj,0,4);
 
     Solution obj;
     vector<int> ans=obj.bfsofGraph(5,adj);
