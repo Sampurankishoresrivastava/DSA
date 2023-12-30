@@ -1,11 +1,5 @@
 class Solution{
   public:
-  
-    bool compare(pair<string, int>& n,pair<string, int>& m)
-    {
-      return n.first < m.first;
-    }
-  
     //Function to return the name of candidate that received maximum votes.
     vector<string> winner(string arr[],int n)
     {
