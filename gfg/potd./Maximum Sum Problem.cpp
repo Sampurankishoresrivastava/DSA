@@ -4,8 +4,12 @@ class Solution
         int maxSum(int n)
         {
             //code here.
-            if(n==0){
-                return 0;
+            // if(n==0){
+            //     return 0;
+            // }
+
+            if(n<=9){
+                return n;
             }
             
             int check=n;
